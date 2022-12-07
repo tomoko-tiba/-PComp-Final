@@ -94,9 +94,25 @@ Sources :
 
 ## week4
 
-
 ### LED 8x8 Matrix
 
+Sketch
+- neutral / optimistic /pessimistic
 
+//pic 5
+
+Control led using the LedControl library
+
+- Display expression: (0 not lit, 1 lit, each digit represents an led)
+
+```
+// happy face
+byte hf[8]= {B00100100,B00100100,B00100100,B00000000,B10000001,B01111110,B00000000,B00000000};
+// neutral face
+byte nf[8]={B00100100, B00100100,B00100100,B00000000,B11111111,B10000001,B01000010,B00111100};
+// sad face
+byte sf[8]= {B00100100,B00100100,B00100100,B00000000,B00000000,B01111110,B10000001,B00000000}; 
+
+```
 
 
