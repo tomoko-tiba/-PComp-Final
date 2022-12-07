@@ -63,7 +63,7 @@ bool astStateCN = false;
 
   if(buttonStateCN == 0){    			  //being pressed
     if(lastStateCN == false){
-      Serial.write("2"); 				    //start recording
+      Serial.write("2");           //start recording
       lastStateCN = true;
     }
     drawHeart();
@@ -149,6 +149,97 @@ if (label.equals("pessimistic") && ledState == false ) {
     println("send");
     ledState = true;  
   }
+```
+
+//pic 6 
+
+### Designing pictures of the virtual flowers
+
+Set 7 types of flowers representing different emotions.
+
+```
+//The type of sentiment extracted from Json data of the api result .
+String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting", "neutral"}; 
+```
+//pic7
+
+//pic8
+
+//pic9
+
+//pic10
+
+## week4
+
+### LCD screen displaying text
+
+//pic11
+
+```
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+
+int lcdState = 0; // 0 ---- begin, 1 --- nextOrEnd, 2 --- result, 3 --- wait
+int breakTime = 0;
+bool dataReceived = false;
+
+// emotion analysis result
+String tendencyRe[3] = {"Pessimistic", "Optimistic" ,"Neutral"}; // 0, 1, 2
+String emotionType[6] = {"Happy", "Like", "Sad", "Fearful", "Angry", "Disgusting"}; // 3, 4, 5, 6, 7, 8
+String printEmotion = "";
+
+//setup()
+lcd.init();            
+lcd.backlight();
+lcd.setCursor(0,0);
+lcd.print("Press button to");
+lcd.setCursor(0,1);
+lcd.print("inject emotion.");
+
+void lcdDiplay(){
+   if( breakTime > 100 ){
+        breakTime = 0;
+        lcdState = 1;
+   }
+   if(lcdState == 0){
+     lcd.clear();
+      lcd.setCursor(0,0);
+      lcd.print("Press button to");
+      lcd.setCursor(0,1);
+      lcd.print("inject emotion.");
+      delay(100); 
+   }else if(lcdState == 1){
+        lcd.clear();
+        lcd.setCursor(0,0);
+        lcd.print("inject again or");
+        lcd.setCursor(0,1);
+        lcd.print("plant the seed");
+        delay(100); 
+   }else if(lcdState == 2){
+    if(dataReceived){ 
+     lcd.clear();
+      lcd.setCursor(0,0);    // define where to print the text
+      lcd.print(tendency);
+      lcd.setCursor(0,1);
+      if(type != "") {
+        if(type == "wrong"){
+          lcd.clear();
+          lcd.setCursor(0,0); 
+          lcd.print("Failed. Please");
+          lcd.setCursor(0,1);
+          lcd.print("record again.");
+        }else{
+        lcd.print(">> " + type);
+        }
+      }
+      delay(100); 
+    }else{
+      lcd.clear();
+      lcd.setCursor(0,0);     // define where to print the text
+      lcd.print("Please Wait");
+    }
+   }
+}
 ```
 
 
