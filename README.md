@@ -3,7 +3,10 @@
 Pcomp final project - Yan Wang 22019755
 
 
-## week 1 : Inspiration and idea
+## week 1 
+
+
+### Inspiration and idea
 
 Furniture giant Ikea created a live experiment for school children in Dubai.It involved two identical plants being put in identical conditions for 30 days.The only difference was that one plant was spoken to negatively, while the other was showered with regular compliments, At the end of the period, there was a clear difference in how the plants looked.
 
@@ -37,7 +40,7 @@ Output
 - 8x8 LED Matrix (shows emoji)
 
 
-## week 2 : Button and recording test
+## week 2
 
 ### Game flow modifications
 
@@ -74,9 +77,9 @@ bool astStateCN = false;
 
 //pic4
 
-### Speech recognition API 
+### API Testing 
 
-The HTTP request library of Processing was used to make POST requests in Processing.  There were many difficulties in this process, , such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will briefly document the process in this section：
+I used HTTP request library of Processing to make POST requests.  There were many difficulties in this process, , such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will briefly document the process in this section：
 
 1. Record ( processing minim Library )
 2. Audio to text（Baidu Voice Recognition Api）
@@ -88,6 +91,11 @@ Sources :
 - Baidu Voice Recognition Api : https://ai.baidu.com/tech/speech/asr
 - Baidu Translation Api : https://ai.baidu.com/tech/mt/text_trans
 - Baidu Emotion Detection Api : https://ai.baidu.com/tech/nlp_apply/emotion_detection
+
+## week4
+
+
+### LED 8x8 Matrix
 
 
 
