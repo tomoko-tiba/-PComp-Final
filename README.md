@@ -244,13 +244,65 @@ void lcdDiplay(){
 
 ### TFT screen displaying the result image
 
-The code for the Adafruit library and tft screen display takes up a lot of memory and requires a separate arduino to control, so the two Arduinos need to communicate with each other.
+The tft screen display requires the use of the Adafruit library, which takes up a lot of memory space and requires a separate piece of arduino to control. Therefore two Arduinos need to communicate with each other.
 
 - Problems: 
-   1. both boards must be of the same type (e.g. arduino uno) to communicate via the rx tx port
-   2. processing needs to have the serial port open in order to continuously receive signals from the buttons, while the arduino can only be opened	
+   1. When two arduino boards are of different versions (uno and leonardo), it is not possible to successfully communicate via tx and rx ports.
+   2. processing needs to have the serial port open in order to continuously receive signals from the buttons, while the arduino can only have one serial port open and cannot receive signals from both the computer and the other arduino.
+
+- Solutions: Using processing to send messages to two arduinos separately, the two arduinos do not communicate with each other.
+
+//pic12
+
+### Button: select language and record
 
 
+```
+void state(){
+  int buttonStateEN = digitalRead(enButton);   //English
+  
+  if(buttonStateEN == 0){
+    if(lastStateEN == false){
+      Serial.write("1");      //start recording
+      lastStateEN = true;
+      breakTime = 0;         //clear all texts 
+      ledState = 1;
+    }
+    drawHeart();
+  }else if(buttonStateEN == 1){
+    if(lastStateEN == true){
+      Serial.write("0");      //end recording
+      lastStateEN = false;
+      ledState = 2;            //stop led
+      lcdState = 2;            //show text result 
+      dataReceived = false;
+    }
+    if(lcdState == 2) breakTime ++; 
+  }
+  
+  int buttonStateCN = digitalRead(cnButton);   // Chinese
+
+  if(buttonStateCN == 0){      //being pressed ： 0
+    if(lastStateCN == false){
+      Serial.write("2");        //start recording
+      lastStateCN = true;
+      breakTime = 0;           //clear all texts 
+      ledState = 1;            //show text result
+    }
+    drawHeart();
+    
+  }else if(buttonStateCN == 1){ //not pressed ： 1
+    if(lastStateCN == true){
+      Serial.write("0");        //end recording
+      lastStateCN = false;
+      ledState = 2;            //show
+      lcdState = 2;            //show text result
+      dataReceived = false;
+    }
+    if(lcdState == 2) breakTime ++;
+  }
+}
+```
 
 
 
