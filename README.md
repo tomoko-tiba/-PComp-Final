@@ -63,7 +63,7 @@ bool astStateCN = false;
 
   if(buttonStateCN == 0){    			  //being pressed
     if(lastStateCN == false){
-      Serial.write("2");           //start recording
+      Serial.write("2");              //start recording
       lastStateCN = true;
     }
     drawHeart();
@@ -241,6 +241,15 @@ void lcdDiplay(){
    }
 }
 ```
+
+### TFT screen displaying the result image
+
+The code for the Adafruit library and tft screen display takes up a lot of memory and requires a separate arduino to control, so the two Arduinos need to communicate with each other.
+
+- Problems: 
+   1. both boards must be of the same type (e.g. arduino uno) to communicate via the rx tx port
+   2. processing needs to have the serial port open in order to continuously receive signals from the buttons, while the arduino can only be opened	
+
 
 
 
