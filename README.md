@@ -76,12 +76,11 @@ bool astStateCN = false;
 
 ### Speech recognition API 
 
-The HTTP request library of Processing was used to make POST requests in Processing. There were also a number of difficulties in this process, such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will briefly document the process in this section：
+The HTTP request library of Processing was used to make POST requests in Processing.  There were many difficulties in this process, , such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will briefly document the process in this section：
 
 1. Record ( processing minim Library )
 2. Audio to text（Baidu Voice Recognition Api）
-  - 1537 for Chinese, 1737 for English, translates to Chinese when English is entered（Baidu Translation api）
- 
+   - 1537 for Chinese, 1737 for English, translates to Chinese when English is entered（Baidu Translation api）
 3. Analysis of textual emotions（Baidu Conversational emotion recognition Api）
 
 Sources :
