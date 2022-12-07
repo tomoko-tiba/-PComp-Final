@@ -103,16 +103,54 @@ Sketch
 
 Control led using the LedControl library
 
-- Display expression: (0 not lit, 1 lit, each digit represents an led)
+- Emoji display : each digit represents an led , 0 not lit, 1 lit, each digit represents an led.
 
 ```
 // happy face
 byte hf[8]= {B00100100,B00100100,B00100100,B00000000,B10000001,B01111110,B00000000,B00000000};
+
 // neutral face
 byte nf[8]={B00100100, B00100100,B00100100,B00000000,B11111111,B10000001,B01000010,B00111100};
+
 // sad face
 byte sf[8]= {B00100100,B00100100,B00100100,B00000000,B00000000,B01111110,B10000001,B00000000}; 
+```
+
+Displaying emoji according to the analysis results.
+
+1. Extract the text of results of the api and determine which sentiment is input. (Processing)
+
+- Problem: cannot be determined correctly.
+
+- Reason：The String a extracted from the Json cannot be used directly to determine whether it is equal to the String b declared in processing using '=='.  
+
+```                   
+String a = emotionJson1.getString(“label”); //neutral
+String b = “neutral”；
+if(a == b) println (“ture”);                //can’t work
+```
+
+- Solutions ：
 
 ```
+if(a.equals.(b)) println (“ture”);          //print true
+```
+
+2. Transferring the results back to the arduino. 
+
+```
+// setup()
+String portName = Serial.list()[3]; 
+myPort = new Serial(this, portName, 9600);  
+
+// draw()
+if (label.equals("pessimistic") && ledState == false ) { 
+    myPort.write(0); 
+    println("send");
+    ledState = true;  
+  }
+```
+
+
 
 
