@@ -2,7 +2,7 @@
 
 Pcomp final project - Yan Wang 22019755
 
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/0.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/0.png](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/14.heic)
 
 ### Video ： https://www.youtube.com/watch?v=DIsOEUccMT4
 
