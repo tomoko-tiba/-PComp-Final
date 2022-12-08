@@ -167,7 +167,6 @@ String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting"
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.1.png)
 
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
-
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/10.png)
 
 
@@ -394,7 +393,7 @@ All in all, I used two arduino uno boards, two buttons used as input switches fo
 
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/21.png)
 
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/22.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/23.png)
 
 ### Future work
 
