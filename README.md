@@ -2,6 +2,8 @@
 
 Pcomp final project - Yan Wang 22019755
 
+### Video ： https://www.youtube.com/watch?v=DIsOEUccMT4
+
 
 ## week 1 
 
@@ -305,9 +307,58 @@ void state(){
 }
 ```
 
-### **Connect all arduino parts**
+### Illuminate the brightness sensor to end the game
+
+You can only end the game when buttons are not being preesed.
+
+```
+  int light = analogRead(lightSensor);
+  if(light > 1000){
+    int buttonStateEN = digitalRead(enButton);
+    int buttonStateCN = digitalRead(cnButton);
+    
+    if(buttonStateEN == 1 && buttonStateCN == 1 && lightState == false){
+      Serial.write("3");                     //send message to Processing to end the game
+      lightState = true;
+      seedCount++;
+    }
+```
+
+### Connect all arduino parts
+
+//pic14
+
+### Making the shell
+
+//pic15
 
 
+### Writing game logic
+
+Each time a sentiment value is entered, it is stored and added in an array.
+
+```
+//Processing
+String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting", "neutral"}; 
+float[] sourceCount = {0, 0, 0, 0, 0, 0, 0}; 
+```
+
+And the result of each game is the strongest emotion - the maximum value in the array. 
+Find the maximum value and return the index of this value.
+
+```
+int findMax(){
+  float num = 0;
+  int index = 0;
+  for(int i = 0; i <= 6; i++){     
+      if (sourceCount[i] > num ) { 
+        num = sourceCount[i];
+        index = i;
+      }
+    }
+  if(num <= 0) return 6; 
+  return index;
+```
 
 
 
