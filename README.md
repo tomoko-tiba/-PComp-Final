@@ -82,7 +82,7 @@ bool astStateCN = false;
 
 ### API Testing 
 
-I used HTTP request library of Processing to make POST requests.  There were many difficulties in this process, , such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will briefly document the process in this section：
+I used HTTP request library of Processing to make POST requests.  There were many difficulties in this process, , such as incorrect conversion of text encoding formats and inaccurate recognition of the recording format. However, as this part is not part of physical computing, I will only briefly document the process in this section：
 
 1. Record ( processing minim Library )
 2. Audio to text（Baidu Voice Recognition Api）
