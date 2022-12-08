@@ -169,8 +169,8 @@ String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting"
 
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.1.png)
 
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/10.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
 
 
 ## week4
