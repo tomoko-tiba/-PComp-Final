@@ -256,6 +256,7 @@ The tft screen display requires the use of the Adafruit library, which takes up 
 
 ### Button: select language and record
 
+//pic13
 
 ```
 void state(){
@@ -303,6 +304,10 @@ void state(){
   }
 }
 ```
+
+### **Connect all arduino parts**
+
+
 
 
 
