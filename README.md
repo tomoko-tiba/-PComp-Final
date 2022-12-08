@@ -154,6 +154,7 @@ if (label.equals("pessimistic") && ledState == false ) {
 ```
 
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/6.jpeg)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/7.png)
 
 ### Designing pictures of the virtual flowers
 
@@ -163,11 +164,11 @@ Set 7 types of flowers representing different emotions.
 //The type of sentiment extracted from Json data of the api result .
 String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting", "neutral"}; 
 ```
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/7.png)
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.1.png)
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/10.png)
-![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/11.jpeg)
+
 
 ## week4
 
