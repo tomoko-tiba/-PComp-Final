@@ -4,8 +4,10 @@
 
 ### Video ： https://www.youtube.com/watch?v=DIsOEUccMT4
 
+## [PPT](https://onedrive.live.com/?cid=0884787D3E681612&id=884787D3E681612%21273&parId=root&o=OneUp)
+
 Pcomp final project - Yan Wang 22019755
-[PPT](https://onedrive.live.com/?cid=0884787D3E681612&id=884787D3E681612%21273&parId=root&o=OneUp)
+
 
 ## week 1 
 
