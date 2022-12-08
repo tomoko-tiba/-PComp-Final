@@ -121,10 +121,8 @@ byte sf[8]= {B00100100,B00100100,B00100100,B00000000,B00000000,B01111110,B100000
 Displaying emoji according to the analysis results.
 
 1. Extract the text of results of the api and determine which sentiment is input. (Processing)
-
-- Problem: cannot be determined correctly.
-
-- Reason：The String a extracted from the Json cannot be used directly to determine whether it is equal to the String b declared in processing using '=='.  
+ - Problem: cannot be determined correctly.
+ - Reason：The String a extracted from the Json cannot be used directly to determine whether it  is equal to the String b declared in processing using '=='.  
 
 ```                   
 String a = emotionJson1.getString(“label”); //neutral
@@ -132,7 +130,7 @@ String b = “neutral”；
 if(a == b) println (“ture”);                //can’t work
 ```
 
-- Solutions ：
+  - Solutions ：
 
 ```
 if(a.equals.(b)) println (“ture”);          //print true
@@ -175,7 +173,7 @@ String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting"
 
 ### LCD screen displaying text
 
-//pic11
+Display of input results and usage tips.
 
 ```
 #include <LiquidCrystal_I2C.h>
@@ -244,7 +242,27 @@ void lcdDiplay(){
 }
 ```
 
+//pic12
+
+
 ### TFT screen displaying the result image
+
+- Image Display
+  - Need sd card to store images, format it to fax32 using win (need to buy sd card, will test again next week)
+  - I can get a moving image by playing the image in bmp format, the size of the screen. It is not possible to play a video directly.
+
+- Text Display
+
+```
+  tft.setRotation(2);
+  tft.setCursor(0, 150);                         // Text coordinates
+  tft.setTextColor(ST77XX_GREEN);                 // Color
+  tft.setTextSize(4);                               // Size
+  tft.println("Virtual");          
+  tft.println("Flower");
+  tft.println("Planting");
+  tft.println("Experiment");
+```
 
 The tft screen display requires the use of the Adafruit library, which takes up a lot of memory space and requires a separate piece of arduino to control. Therefore two Arduinos need to communicate with each other.
 
@@ -254,11 +272,11 @@ The tft screen display requires the use of the Adafruit library, which takes up 
 
 - Solutions: Using processing to send messages to two arduinos separately, the two arduinos do not communicate with each other.
 
-//pic12
+//pic13
 
 ### Button: select language and record
 
-//pic13
+//pic14
 
 ```
 void state(){
@@ -326,11 +344,12 @@ You can only end the game when buttons are not being preesed.
 
 ### Connect all arduino parts
 
-//pic14
+//pic15
 
 ### Making the shell
 
-//pic15
+//pic16
+//pic17
 
 
 ### Writing game logic
@@ -360,5 +379,13 @@ int findMax(){
   return index;
 ```
 
+## Conclusion 
 
+All in all, I used two arduino uno boards, two buttons used as input switches for recording in Chinese and English, and called the api to analyse the tendency of people's feelings when they speak, which affects the final game outcome. An 8x8 led Matrix displays the positive and negative tendencies of the feelings, and an LCD screen displays the specific type of feelings being recorded in text. Ultimately, after the player has made several inputs, the brightness sensor can be lit using a torch and a graph of the game's outcome (i.e. a virtual flower) is displayed on the IPS screen.
+
+//pic18
+
+### Future work
+
+After that I would like to be able to automatically generate patterns of flowers as a result of the game, rather than playing pictures, which would allow for a more varied and interesting outcome.
 
