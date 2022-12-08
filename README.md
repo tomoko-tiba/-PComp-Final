@@ -166,7 +166,9 @@ String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting"
 ```
 
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.1.png)
+
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
+
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/10.png)
 
 
@@ -243,7 +245,7 @@ void lcdDiplay(){
 }
 ```
 
-//pic12
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/12.png)
 
 
 ### TFT screen displaying the result image
@@ -273,11 +275,9 @@ The tft screen display requires the use of the Adafruit library, which takes up 
 
 - Solutions: Using processing to send messages to two arduinos separately, the two arduinos do not communicate with each other.
 
-//pic13
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/13.png)
 
 ### Button: select language and record
-
-//pic14
 
 ```
 void state(){
@@ -326,6 +326,8 @@ void state(){
 }
 ```
 
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/14.png)
+
 ### Illuminate the brightness sensor to end the game
 
 You can only end the game when buttons are not being preesed.
@@ -345,12 +347,13 @@ You can only end the game when buttons are not being preesed.
 
 ### Connect all arduino parts
 
-//pic15
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/15.png)
 
 ### Making the shell
 
-//pic16
-//pic17
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/16.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/17.png)
 
 
 ### Writing game logic
@@ -384,7 +387,15 @@ int findMax(){
 
 All in all, I used two arduino uno boards, two buttons used as input switches for recording in Chinese and English, and called the api to analyse the tendency of people's feelings when they speak, which affects the final game outcome. An 8x8 led Matrix displays the positive and negative tendencies of the feelings, and an LCD screen displays the specific type of feelings being recorded in text. Ultimately, after the player has made several inputs, the brightness sensor can be lit using a torch and a graph of the game's outcome (i.e. a virtual flower) is displayed on the IPS screen.
 
-//pic18
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/18.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/19.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/20.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/21.png)
+
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/22.png)
 
 ### Future work
 
