@@ -1,11 +1,10 @@
 # Virtual Flower Planting Experiment
 
-Pcomp final project - Yan Wang 22019755
-
 ![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/0.png)
 
 ### Video ： https://www.youtube.com/watch?v=DIsOEUccMT4
 
+Pcomp final project - Yan Wang 22019755
 
 ## week 1 
 
