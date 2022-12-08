@@ -203,21 +203,21 @@ void lcdDiplay(){
         breakTime = 0;
         lcdState = 1;
    }
-   if(lcdState == 0){
+   if(lcdState == 0){                   //start
      lcd.clear();
       lcd.setCursor(0,0);
       lcd.print("Press button to");
       lcd.setCursor(0,1);
       lcd.print("inject emotion.");
       delay(100); 
-   }else if(lcdState == 1){
+   }else if(lcdState == 1){            //input again tips
         lcd.clear();
         lcd.setCursor(0,0);
         lcd.print("inject again or");
         lcd.setCursor(0,1);
         lcd.print("plant the seed");
         delay(100); 
-   }else if(lcdState == 2){
+   }else if(lcdState == 2){            //results
     if(dataReceived){ 
      lcd.clear();
       lcd.setCursor(0,0);    // define where to print the text
@@ -235,7 +235,7 @@ void lcdDiplay(){
         }
       }
       delay(100); 
-    }else{
+    }else{                    //waiting for processing messages
       lcd.clear();
       lcd.setCursor(0,0);     // define where to print the text
       lcd.print("Please Wait");
