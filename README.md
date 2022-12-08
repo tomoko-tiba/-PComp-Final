@@ -14,7 +14,7 @@ Pcomp final project - Yan Wang 22019755
 
 Furniture giant Ikea created a live experiment for school children in Dubai.It involved two identical plants being put in identical conditions for 30 days.The only difference was that one plant was spoken to negatively, while the other was showered with regular compliments, At the end of the period, there was a clear difference in how the plants looked.
 
-//pic
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/1.png)
 
 https://www.dailymail.co.uk/femail/article-5703247/Bizarre-experiment-shows-talking-plants-thrive.html
 https://www.dailymail.co.uk/femail/article-5703247/Bizarre-experiment-shows-talking-plants-thrive.html#v-6317337125629376301
@@ -23,11 +23,11 @@ Although the results of this experiment are not necessarily scientific, there is
 
 ### Sketch & User Flow
 
-//pic2
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/2.png)
 
 The device has an LCD screen that shows the current state of the flower, the participants have to speak to the virtual flower and choose different language options (English/Mandarin)(through buttons). The computer will call different APIs to convert the recording into text, then the APIs will be called to analyse the emotional tendencies of the text. At the same time, a 8x8 LED matrix will display emoji to indicate the result of the analysis, and this emotional energy will become fertiliser for the flower to grow. After several inputs, the last participant needs to inject the flower with sunlight (using the torch of their mobile phone to illuminate the brightness sensor) and finally a wonderful virtual flower is created.
 
-//pic3
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/3.png)
 
 During multiple inputs, different emotions will affect the generation of the flower attributes, which may be its size, shape, variety, flavour, use, or even character. (A list of all the attributes and the algorithm for determining them will be needed later)
 
@@ -79,7 +79,7 @@ bool astStateCN = false;
   }
 ```
 
-//pic4
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/4.png)
 
 ### API Testing 
 
@@ -103,7 +103,7 @@ Sources :
 Sketch
 - neutral / optimistic /pessimistic
 
-//pic 5
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/5.png)
 
 Control led using the LedControl library
 
@@ -153,7 +153,7 @@ if (label.equals("pessimistic") && ledState == false ) {
   }
 ```
 
-//pic 6 
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/6.jpeg)
 
 ### Designing pictures of the virtual flowers
 
@@ -163,13 +163,11 @@ Set 7 types of flowers representing different emotions.
 //The type of sentiment extracted from Json data of the api result .
 String[] emotionType = {"happy", "like", "sad", "fearful", "angry", "disgusting", "neutral"}; 
 ```
-//pic7
-
-//pic8
-
-//pic9
-
-//pic10
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/7.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/8.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/9.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/10.png)
+![](https://github.com/tomoko-tiba/-PComp-Final/blob/pics/11.jpeg)
 
 ## week4
 
